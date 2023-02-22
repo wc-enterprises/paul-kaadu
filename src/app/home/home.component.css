@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main{
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     background: rgba(240, 226, 107, 0.8);
+}
+.offerbox{
+    width: 390px;
+    height: 33px;
+    background: rgba(80, 160, 84, 0.8);
+}

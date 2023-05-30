@@ -1,10 +1,307 @@
-<div style="
-    width: 100vw;
-    height: 100vh;
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  ">
-    <div style="width: 70px; height: 40px; background-color: beige">Click Me</div>
-</div>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+      <div id="main">
+        <div class="offerbox">
+            <div class="offercont">
+                <p>Free delivery on Orders About Rs.1000</p>
+            </div>
+        </div>
+        <div class="bulkorderbox">
+            <div class="bulkordercont">
+                <p class="bulkorderfont">Bulk Order Inquiries :</p>
+                &nbsp;<button class="bulkorderbutton">Click here</button>
+               </div>
+        </div>
+        <div class="navbar">
+           
+            <div class="logo" > <img src="/assets/images/logo2.svg" > </div>
+           <mat-icon class="icons">phonehi</mat-icon> 
+           <mat-icon class="icons">menu</mat-icon> 
+        </div>
+        <div class="herosection">
+          <!-- <div class="heropart"> -->
+            <!-- <img src="/assets/images/hero_section.svg" > -->
+              <!-- <div class="herosectionimg">
+                  <img src="/assets/images/image2.webp" >
+              </div> -->
+              <!-- <div class="herosectioncont">
+                  <p>100% Fresh and Organic
+                      Spices.<br><span>We deliver organic spices</span></p>
+              </div> -->
+              <div class="herosectionimg">
+                  <img src="/assets/images/hero_section.svg" >
+              </div>
+          <!-- </div> -->
+       </div>
+
+       <div class="catagoriescontainer">
+        <div class="catagoriesfont">
+         <p>Catagories :</p>
+        </div>
+        <!-- <div class="catagoriesbox" > -->
+                      <div class="cards-container">
+                        <div class="button button-left" (click)="onSwipeLeft()">&lt;</div>
+                        <mat-card class="card" *ngFor="let card of cards.slice(currentCardIndex, currentCardIndex + 2)">
+                          <mat-card-title-group class="one">
+                            <img src="{{card.image}}">
+                          </mat-card-title-group>
+                          <mat-card-title-group class="second">
+                            {{card.spices}}
+                          </mat-card-title-group>
+                          <mat-card-title-group class="three">
+                            <button>{{card.button}}</button>
+                          </mat-card-title-group>
+                        </mat-card>
+                        <div class="button button-right" (click)="onSwipeRight()">&gt;</div>
+                      </div>
+        <!-- </div> -->
+      </div>
+
+
+      <div class="productcontainer">
+        <div class="catagoriesfont">
+         <p>Our products :</p>
+        </div>
+        <div class="catagoriesbox" >
+            <div class="productfont">
+                <p>Cardamom:</p>
+               </div>
+                      <div class="product-container">
+                        <div class="button button-left" (click)="onSwiperLeft()">&lt;</div>
+                        <mat-card class="cardamomcard" *ngFor="let cardamomcard of cardamomcard.slice(currentCardamomcardIndex, currentCardamomcardIndex + 2)">
+                            <mat-card-title-group class="cardamomimg">
+                                <img  src="{{cardamomcard.image}}">
+                            </mat-card-title-group>
+                            <mat-card-title-group class="namelist">
+                                <mat-card-title-group class="name">{{cardamomcard.name}}
+                            </mat-card-title-group>       
+                            <mat-card-title-group class="grade"> {{cardamomcard.grade}}
+                            </mat-card-title-group>    
+                        </mat-card-title-group>    
+                        <mat-card-title-group class="pricelist">
+                            <mat-card-title-group class="price">
+                              <img  src="assets/images/rupee.png"> {{cardamomcard.price}}
+                            </mat-card-title-group>     
+                            <mat-card-title-group class="weight"> {{cardamomcard.weight}}   
+                            </mat-card-title-group> 
+                                  
+                        </mat-card-title-group>   
+                        <mat-card-title-group class="enquirebutton">
+                            <button >{{cardamomcard.button}}</button>
+                        </mat-card-title-group>     
+                    </mat-card>     
+                                  
+                    <div class="button button-right" (click)="onSwiperRight()">&gt;</div>         
+                </div>
+
+                </div>  
+
+                <div class="catagoriesbox" >
+                  <div class="productfont">
+                      <p>Cardamom:</p>
+                     </div>
+                            <div class="product-container">
+                              <div class="button button-left" (click)="onSwiperLeft()">&lt;</div>
+                              <mat-card class="cardamomcard" *ngFor="let cardamomcard of cardamomcard.slice(currentCardamomcardIndex, currentCardamomcardIndex + 2)">
+                                  <mat-card-title-group class="cardamomimg">
+                                      <img  src="{{cardamomcard.image}}">
+                                  </mat-card-title-group>
+                                  <mat-card-title-group class="namelist">
+                                      <mat-card-title-group class="name">{{cardamomcard.name}}
+                                  </mat-card-title-group>       
+                                  <mat-card-title-group class="grade"> {{cardamomcard.grade}}
+                                  </mat-card-title-group>    
+                              </mat-card-title-group>    
+                              <mat-card-title-group class="pricelist">
+                                  <mat-card-title-group class="price">
+                                    <img  src="assets/images/rupee.png"> {{cardamomcard.price}}
+                                  </mat-card-title-group>     
+                                  <mat-card-title-group class="weight"> {{cardamomcard.weight}}   
+                                  </mat-card-title-group> 
+                                        
+                              </mat-card-title-group>   
+                              <mat-card-title-group class="enquirebutton">
+                                  <button >{{cardamomcard.button}}</button>
+                              </mat-card-title-group>     
+                          </mat-card>     
+                                        
+                          <div class="button button-right" (click)="onSwiperRight()">&gt;</div>         
+                      </div>
+      
+                      </div>  
+
+                      <div class="catagoriesbox" >
+                        <div class="productfont">
+                            <p>Cardamom:</p>
+                           </div>
+                                  <div class="product-container">
+                                    <div class="button button-left" (click)="onSwiperLeft()">&lt;</div>
+                                    <mat-card class="cardamomcard" *ngFor="let cardamomcard of cardamomcard.slice(currentCardamomcardIndex, currentCardamomcardIndex + 2)">
+                                        <mat-card-title-group class="cardamomimg">
+                                            <img  src="{{cardamomcard.image}}">
+                                        </mat-card-title-group>
+                                        <mat-card-title-group class="namelist">
+                                            <mat-card-title-group class="name">{{cardamomcard.name}}
+                                        </mat-card-title-group>       
+                                        <mat-card-title-group class="grade"> {{cardamomcard.grade}}
+                                        </mat-card-title-group>    
+                                    </mat-card-title-group>    
+                                    <mat-card-title-group class="pricelist">
+                                        <mat-card-title-group class="price">
+                                          <img  src="assets/images/rupee.png"> {{cardamomcard.price}}
+                                        </mat-card-title-group>     
+                                        <mat-card-title-group class="weight"> {{cardamomcard.weight}}   
+                                        </mat-card-title-group> 
+                                              
+                                    </mat-card-title-group>   
+                                    <mat-card-title-group class="enquirebutton">
+                                        <button >{{cardamomcard.button}}</button>
+                                    </mat-card-title-group>     
+                                </mat-card>     
+                                              
+                                <div class="button button-right" (click)="onSwiperRight()">&gt;</div>         
+                            </div>
+            
+                            </div>  
+
+                            <div class="catagoriesbox" >
+                              <div class="productfont">
+                                  <p>Cardamom:</p>
+                                 </div>
+                                        <div class="product-container">
+                                          <div class="button button-left" (click)="onSwiperLeft()">&lt;</div>
+                                          <mat-card class="cardamomcard" *ngFor="let cardamomcard of cardamomcard.slice(currentCardamomcardIndex, currentCardamomcardIndex + 2)">
+                                              <mat-card-title-group class="cardamomimg">
+                                                  <img  src="{{cardamomcard.image}}">
+                                              </mat-card-title-group>
+                                              <mat-card-title-group class="namelist">
+                                                  <mat-card-title-group class="name">{{cardamomcard.name}}
+                                              </mat-card-title-group>       
+                                              <mat-card-title-group class="grade"> {{cardamomcard.grade}}
+                                              </mat-card-title-group>    
+                                          </mat-card-title-group>    
+                                          <mat-card-title-group class="pricelist">
+                                              <mat-card-title-group class="price">
+                                                <img  src="assets/images/rupee.png"> {{cardamomcard.price}}
+                                              </mat-card-title-group>     
+                                              <mat-card-title-group class="weight"> {{cardamomcard.weight}}   
+                                              </mat-card-title-group> 
+                                                    
+                                          </mat-card-title-group>   
+                                          <mat-card-title-group class="enquirebutton">
+                                              <button >{{cardamomcard.button}}</button>
+                                          </mat-card-title-group>     
+                                      </mat-card>     
+                                                    
+                                      <div class="button button-right" (click)="onSwiperRight()">&gt;</div>         
+                                  </div>
+                  
+                                  </div>  
+
+                                  <div class="catagoriesbox" >
+                                    <div class="productfont">
+                                        <p>Cardamom:</p>
+                                       </div>
+                                              <div class="product-container">
+                                                <div class="button button-left" (click)="onSwiperLeft()">&lt;</div>
+                                                <mat-card class="cardamomcard" *ngFor="let cardamomcard of cardamomcard.slice(currentCardamomcardIndex, currentCardamomcardIndex + 2)">
+                                                    <mat-card-title-group class="cardamomimg">
+                                                        <img  src="{{cardamomcard.image}}">
+                                                    </mat-card-title-group>
+                                                    <mat-card-title-group class="namelist">
+                                                        <mat-card-title-group class="name">{{cardamomcard.name}}
+                                                    </mat-card-title-group>       
+                                                    <mat-card-title-group class="grade"> {{cardamomcard.grade}}
+                                                    </mat-card-title-group>    
+                                                </mat-card-title-group>    
+                                                <mat-card-title-group class="pricelist">
+                                                    <mat-card-title-group class="price">
+                                                      <img  src="assets/images/rupee.png"> {{cardamomcard.price}}
+                                                    </mat-card-title-group>     
+                                                    <mat-card-title-group class="weight"> {{cardamomcard.weight}}   
+                                                    </mat-card-title-group> 
+                                                          
+                                                </mat-card-title-group>   
+                                                <mat-card-title-group class="enquirebutton">
+                                                    <button >{{cardamomcard.button}}</button>
+                                                </mat-card-title-group>     
+                                            </mat-card>     
+                                                          
+                                            <div class="button button-right" (click)="onSwiperRight()">&gt;</div>         
+                                        </div>
+                        
+                                        </div>  
+
+            </div>
+
+
+
+
+            <div class="backtotop-box">
+              <div class="backtotop-font">
+                  <p>Back to top</p>
+              </div>
+          </div>
+          <div class="footer">
+              <div class="footer-cont1">
+                  <mat-card-title-group class="footer-logo">
+                      <img  src="/assets/images/logo4.svg">
+                      <p>100% Fresh and Organic  spices.</p>
+                  </mat-card-title-group>
+              </div>
+              <div class="footer-cont2">
+                <mat-card-title-group class="site-box">
+                  <h5>Site links:</h5>
+                <div class="site-cont"> <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                  </ul> </div>
+              </mat-card-title-group>
+              </div>
+              <div class="footer-cont3">
+                <mat-card-title-group class="business-box">
+                  <p>Business-hours:</p>
+                  <div class="business-hours">
+                     
+                        <p>{{openDays}}:
+                        {{daysTime}}</p>
+                     
+                        <p>{{closedDays}}:
+                          {{daysClosed}}</p>
+                     
+                    </div>
+                  </mat-card-title-group>
+              </div>
+              <div class="footer-cont4">
+                <mat-card-title-group class="contact-box">
+                  <p>Contact us:</p>
+                  
+                    <div class="address-section">
+                      <mat-icon>home</mat-icon>
+                      <p>ABINPAUL E-COMMERCE PVT. LIMITED.
+                        309 Shanti Mall, Satadhar Cross Road, 
+                        Sola Road, Gudalur, Kerala 380061</p>
+                    </div>
+                    <div class="number-section">
+                      <mat-icon>phone</mat-icon>
+                      <p>9807654321
+                         9087654321
+                      </p>
+                    </div>
+                    <div class="mail-section">
+                      <mat-icon>mail</mat-icon>
+                      <p>abinpaul@gmail.com</p>
+                    </div>
+                 
+                </mat-card-title-group>
+                </div>
+          </div>
+
+        </div>
+    </body>
+</html>

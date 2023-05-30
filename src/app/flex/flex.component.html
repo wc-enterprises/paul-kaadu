@@ -1,0 +1,153 @@
+<html>
+    <head></head>
+    <body>
+        <!-- <div class="parent">
+            <div class="box1">box1</div>
+            <div class="box2">box2</div>
+            <div class="box3">box3</div>
+        </div> -->
+
+
+        <!-- <div class="slider-container">
+            <div class="slider-wrapper" [ngStyle]="{'transform': 'translateX(' + translateValue + 'px)'}">
+              <div class="card" *ngFor="let card of cards">{{ card }}</div>
+            </div>
+            <button class="slider-button left" (click)="moveLeft()">&lt;</button>
+            <button class="slider-button right" (click)="moveRight()">&gt;</button>
+          </div> -->
+          
+
+          <!-- <div class="catagoriesbox" [ngStyle]="{'transform': 'translateX(' + translateValue + 'px)'}" >
+            <div class="catagoriesbox1" *ngFor="let spices of spices">
+            <mat-card class="mat-card">
+                <mat-card-title-group class="one">
+                    <img  src={{spices.image}}>
+                </mat-card-title-group>
+                      <mat-card-title-group class="second">
+                        {{spices.spices}}
+                       
+                    </mat-card-title-group>
+                    <mat-card-title-group class="three">
+                        <button >  {{spices.button}} </button>
+                    </mat-card-title-group>
+                    
+                      </mat-card>
+                      
+                      </div>
+                      <button class="slider-button left" (click)="moveLeft()">&lt;</button>
+            <button class="slider-button right" (click)="moveRight()">&gt;</button>
+        </div> -->
+
+
+        <!-- <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Card 1</div>
+              <div class="swiper-slide">Card 2</div>
+              <div class="swiper-slide">Card 3</div>
+              
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div> -->
+
+          <!-- <div class="container">
+            <div class="cards" #cards>
+              <div class="card" *ngFor="let card of cardsData">{{card.title}}</div>
+            </div>
+            <div class="nav-buttons">
+              <button (click)="onNavLeftClick()">Left</button>
+              <button (click)="onNavRightClick()">Right</button>
+            </div>
+          </div> -->
+
+          
+
+          <!-- <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="image1.jpg">
+                <p>Product 1</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="image2.jpg">
+                <p>Product 2</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="image3.jpg">
+                <p>Product 3</p>
+              </div>
+              ...
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div> -->
+
+          <!-- <div class="category-slider">
+            <div class="category-card" *ngFor="let category of categories.slice(startIndex, startIndex + 2)">
+              <img src="{{category.image}}" alt="{{category.name}}">
+              <h3>{{category.name}}</h3>
+              <a href="{{category.link}}">Shop Now</a>
+            </div>
+            <div class="slider-buttons">
+              <button (click)="moveCards('left')">◀︎</button>
+              <button (click)="moveCards('right')">▶︎</button>
+            </div>
+          </div> -->
+
+          <!-- <div class="cards-container">
+            <div class="card" *ngFor="let card of cards.slice(currentCardIndex, currentCardIndex + 2)">
+              <h2>{{card.title}}</h2>
+              <p>{{card.description}}</p>
+            </div>
+          </div>
+          
+          <div class="buttons-container">
+            <button (click)="onSwipeLeft()">Left</button>
+            <button (click)="onSwipeRight()">Right</button>
+          </div> -->
+          
+          <!-- <div class="cards-container">
+            <div class="button button-left" (click)="onSwipeLeft()">&lt;</div>
+            <div class="card" *ngFor="let card of cards.slice(currentCardIndex, currentCardIndex + 2)">
+              <h2>{{card.title}}</h2>
+              <p>{{card.description}}</p>
+            </div>
+            <div class="button button-right" (click)="onSwipeRight()">&gt;</div>
+          </div> -->
+
+          <!-- <div class="cards-container">
+            <div class="button button-left" (click)="onSwipeLeft()">&lt;</div>
+            <mat-card class="card" *ngFor="let card of cards.slice(currentCardIndex, currentCardIndex + 2)">
+              <mat-card-title-group class="one">
+                <img src="{{card.image}}">
+              </mat-card-title-group>
+              <mat-card-title-group class="second">
+                {{card.spices}}
+              </mat-card-title-group>
+              <mat-card-title-group class="three">
+                <button>{{card.button}}</button>
+              </mat-card-title-group>
+            </mat-card>
+            <div class="button button-right" (click)="onSwipeRight()">&gt;</div>
+          </div> -->
+           
+          <div class="cards-container">
+            <div class="button button-left" (click)="onSwipeLeft()">&lt;</div>
+            <mat-card class="card" *ngFor="let card of cards.slice(currentCardIndex, currentCardIndex + 2)">
+              <mat-card-title-group class="one">
+                <img src="{{card.image}}">
+              </mat-card-title-group>
+              <mat-card-title-group class="second">
+                {{card.spices}}
+              </mat-card-title-group>
+              <mat-card-title-group class="three">
+                <button>{{card.button}}</button>
+              </mat-card-title-group>
+            </mat-card>
+            <div class="button button-right" (click)="onSwipeRight()">&gt;</div>
+          </div>
+          
+
+                  
+    </body>
+</html>
